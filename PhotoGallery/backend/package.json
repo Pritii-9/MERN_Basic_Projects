@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Priti Jadhav",
-  "license": "ISC",
+  "license": "ISC","winston": "^3.8.4",
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
