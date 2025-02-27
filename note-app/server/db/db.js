@@ -1,12 +1,14 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
-const connectToMongoDB = async () =>{
-    try {
-        await mongoose.connect("mongodb://localhost:27017/note_app");
-        console.log("connected to mongoDB");
-    } catch (error) {
-        console.log("error connecting to mongoDB",error.message);
-    }
-}
+const connectToMongoDB = async () => {
+  try {
+    const mongoDBUrl = "mongodb://0.0.0.0:27017/note_app";
+    await mongoose.connect(mongoDBUrl);
+    console.log("Connected to MongoDB");
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error.message);
+    
+  }
+};
 
 export default connectToMongoDB;
