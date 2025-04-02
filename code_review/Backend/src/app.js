@@ -1,12 +1,13 @@
 import express from "express";
 import aiRoutes from "./routes/ai.routes.js";
 import { config } from "dotenv";
+import cors from 'cors';
 
 // Load environment variables
 config();
 
 const app = express();
-
+app.use(cors())
 app.use(express.json());
 
 // Root endpoint
